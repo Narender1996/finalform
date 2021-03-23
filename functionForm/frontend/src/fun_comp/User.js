@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Navbar from './Navbar'
 
 export default function User() {
 
@@ -42,6 +43,7 @@ export default function User() {
     
     return (
         <div >
+        <Navbar />
            {/* <button onClick={renderTable}>click</button>  */}
 
             <table class="table">

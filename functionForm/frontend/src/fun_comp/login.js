@@ -1,9 +1,18 @@
 import Axios from 'axios';
-import React from 'react';
+import React,{useEffect} from 'react';
 import {useHistory} from 'react-router-dom'
+import Navbar from './Navbar'
 
 function Login(){
   let history=useHistory();
+
+  useEffect(()=>{
+    if(localStorage.getItem('user-id'))
+    {
+      history.push('/home')
+    }
+  },[])
+
 const [state,setState]=React.useState({
     email:"",
     password1:""
@@ -22,11 +31,15 @@ function inputchange(event){
    .then((res)=>{
      if(res.data.status)
      console.log('response data ',res)
+      
+      localStorage.setItem("user-id",JSON.stringify(res.data.msg))
+
       history.push('/home')})
    .catch((err)=>console.log(err))
   }
    return (
      <div>
+     <Navbar />
            <form onSubmit={onSubmit}>
          email:
          <input type="email" name="email" value={state.email} onChange={inputchange}></input><br></br>

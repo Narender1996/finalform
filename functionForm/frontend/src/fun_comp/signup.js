@@ -1,10 +1,19 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
 import  Axios from 'axios'
 import {useHistory} from 'react-router-dom'
+import Navbar from './Navbar'
 
 function Signup()
 {
     let history=useHistory()
+
+    useEffect(()=>{
+      if(localStorage.getItem('user-id'))
+      {
+        history.push('/home')
+      }
+    },[])
+
     const [state, setState]=React.useState({
   Name:"",
   Email:"",
@@ -41,6 +50,7 @@ function Signup()
  
     return (
         <div>
+        <Navbar />
         {console.log(state)}
             <h1>Signup Form</h1>
 

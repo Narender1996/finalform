@@ -17,18 +17,29 @@ export default function Navbar2() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
+          {
+
+            localStorage.getItem('user-id')?
+            <>
             <li className="nav-item active">
-              <NavLink className="nav-link" to="/home">Home <span className="sr-only">(current)</span></NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/User">User</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/">Signup</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link " to="/Login">Login</NavLink>
-            </li>
+            <NavLink className="nav-link" to="/home">Home <span className="sr-only">(current)</span></NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/User">User</NavLink>
+          </li>
+          </>
+         :
+         <>
+         <li className="nav-item">
+         <NavLink className="nav-link" to="/">Signup</NavLink>
+       </li>
+       <li className="nav-item">
+         <NavLink className="nav-link " to="/Login">Login</NavLink>
+       </li>
+
+          </>
+          }
+           
           </ul>
         </div>
       </nav>

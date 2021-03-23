@@ -67,7 +67,7 @@ app.post('/login', async (req, res) => {
       else{
           if(profile.password1==newUser.password1){
               console.log("user match")
-              res.status(200).send({status:200,msg:"user found"})
+              res.status(200).send({status:200,msg:newUser.email})
           }
           else{
               console.log("user not match")
