@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title> Signup Form</title> 
+          
+          
+<link rel="stylesheet" 
+href= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity= 
+"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+crossorigin="anonymous">     
+          
+<link rel="stylesheet" type="text/css" href="style.css"> 
+          
+</head> 
+<body> 
+    
+    <div class="container" > 
+        <div class="row"> 
+        <div class="col-md-3"> 
+                      
+        </div> 
+                  
+        <div class="col-md-6 main"> 
+                      
+            <form action="/sign_up" method="post"> 
+                      
+            <h1> Signup form </h1> 
+                              
+            <input class="box" type="text" name="name" id="name" 
+            placeholder="Name" value="" required /><br /> 
+                              
+            <input class="box" type="email" name="email" id="email" 
+            placeholder="E-Mail "  value="" required /><br /> 
+
+            <input class="box" type="text" name="address" id="address" 
+            placeholder="Address" value="" required /><br /> 
+                              
+            <input class="box" type="password" name="password1" 
+            id="password" placeholder="Password" value="" required/><br /> 
+                              
+            <input class="box" type="password" name="password2" id="cpass"  
+            placeholder="Conform Password" value="" required/><br /> 
+                        <br /> 
+            <input type="submit" id="signupdetails"  
+            name="signupdetails" value="Submit" />           
+            </form>              
+        </div>          
+        <div class="col-md-3"> 
+        </div> 
+                  
+    </div> 
+    </div> 
+</body> 
+</html>     
